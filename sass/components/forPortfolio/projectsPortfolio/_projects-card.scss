@@ -1,0 +1,21 @@
+.project-card {
+  padding: 20px 24px;
+}
+
+.project-card__title {
+  color: $project-title;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 36px;
+  letter-spacing: 0.06em;
+}
+
+.project-card__text {
+  color: $project-text;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.03em;
+}

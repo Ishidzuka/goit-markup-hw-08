@@ -1,0 +1,43 @@
+.icon-list {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+
+  & li:nth-child(2) {
+    margin: 0px 30px;
+  }
+
+  & li:nth-child(3) {
+    margin-right: 30px;
+  }
+}
+
+.icon-list__rect {
+  width: 270px;
+  height: 120px;
+  background-color: $rect-color;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-list__antenna {
+  width: 70px;
+  height: 70px;
+}
+
+.icon-list__clock {
+  width: 70px;
+  height: 70px;
+}
+
+.icon-list__diagram {
+  width: 70px;
+  height: 70px;
+}
+
+.icon-list__astronaut {
+  width: 70px;
+  height: 70px;
+}

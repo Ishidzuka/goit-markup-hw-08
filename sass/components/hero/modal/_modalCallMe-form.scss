@@ -1,0 +1,202 @@
+.modal__call-me {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.03em;
+  color: $h-color;
+  margin-bottom: 12px;
+}
+
+.call-form .person-form input {
+  width: 448px;
+  height: 40px;
+  border: 1px solid $form-border-color;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  padding-left: 42px;
+  outline: none;
+  cursor: pointer;
+}
+
+.call-form {
+  & input:focus {
+    border-color: $hover-color;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  & textarea {
+    width: 448px;
+    height: 120px;
+    border: 1px solid $form-border-color;
+    border-radius: 4px;
+    resize: none;
+    outline: none;
+    display: block;
+    padding: 12px 16px;
+  }
+
+  & textarea::placeholder {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: $commentary-form;
+  }
+
+  & label {
+    margin-bottom: 4px;
+    display: block;
+  }
+
+  & textarea:focus {
+    border-color: $hover-color;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.person-form {
+  margin-bottom: 10px;
+}
+
+.person-form__titles {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: var(--gray-text);
+}
+
+.person-frame {
+  position: relative;
+  height: 40px;
+
+  &:focus-within {
+    fill: $hover-color;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.person-frame__icon {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  color: var(--h-color);
+}
+
+.person-comment {
+  margin-bottom: 20px;
+}
+
+.person-checkbox {
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+  color: $agreement-text;
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 30px;
+}
+
+.person-checkbox__agree-input + .person-checkbox__icon {
+  fill: none;
+  border: 2px solid $checkbox-border;
+  border-radius: 2px;
+}
+
+.person-checkbox__agree-input:checked + .person-checkbox__icon {
+  fill: var(--white-text);
+  background-color: $hover-color;
+  border: none;
+  border-radius: 2px;
+}
+
+.person-checkbox__agree-text {
+  position: relative;
+  padding-left: 36px;
+}
+
+.person-checkbox__agree-input {
+  position: absolute;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.person-checkbox__icon {
+  position: absolute;
+  top: 5px;
+  left: 13px;
+  width: 16px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkbox-icon {
+  position: absolute;
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+}
+
+.person-checkbox__agree-link {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 0.9;
+  letter-spacing: 0.03em;
+  color: $checkbox-link;
+  border-bottom: 1px solid $checkbox-link;
+  display: inline-block;
+}
+
+.person-checkbox__submit-button {
+  width: 200px;
+  height: 50px;
+  background-color: $submit-color;
+  color: $white-text;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.06em;
+  border: none;
+  border-radius: 4px;
+  display: block;
+  margin: 40px auto 0;
+  margin-top: 0;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.modal__close-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: $background-modal;
+  fill: black;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    fill: $hover-color;
+  }
+}
