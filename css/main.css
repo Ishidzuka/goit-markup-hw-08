@@ -784,15 +784,39 @@ button {
   padding-bottom: 60px;
 }
 
-.footer__address-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 0 75px;
+@media (min-width: 360px) {
+  .footer__address-container {
+    display: block;
+    padding: 0 75px;
+  }
 }
 
-.footer-text {
-  text-align: center;
+@media (min-width: 768px) {
+  .footer__address-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width: 1199px) {
+  .footer__address-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: baseline;
+        -ms-flex-pack: baseline;
+            justify-content: baseline;
+  }
+}
+
+@media (max-width: 1199px) {
+  .footer-text {
+    text-align: center;
+  }
 }
 
 .footer-text__logo {
@@ -837,10 +861,24 @@ button {
 
 /*svg footer*/
 .enjoy {
-  margin-left: 165px;
-  text-align: center;
-  margin-top: 5px;
   height: 80px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+@media (min-width: 768px) {
+  .enjoy {
+    margin-left: 165px;
+    text-align: center;
+    margin-top: 5px;
+  }
+}
+
+@media (min-width: 1199px) {
+  .enjoy {
+    margin: 0;
+    margin-left: 70px;
+  }
 }
 
 .enjoy__head {
@@ -857,12 +895,42 @@ button {
 .enjoy-list {
   width: 206px;
   padding: 0px;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media (min-width: 360px) {
+  .enjoy-list {
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (min-width: 768px) {
+  .enjoy-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .enjoy-list__item {

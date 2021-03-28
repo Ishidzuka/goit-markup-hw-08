@@ -5,12 +5,26 @@
 }
 
 .footer__address-container {
-  display: flex;
-  padding: 0 75px;
+  @media (min-width: 360px) {
+    display: block;
+    padding: 0 75px;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
+
+  @media (min-width: 1199px) {
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+  }
 }
 
 .footer-text {
-  text-align: center;
+  @media (max-width: 1199px) {
+    text-align: center;
+  }
 }
 
 .footer-text__logo {
@@ -58,10 +72,20 @@
 /*svg footer*/
 
 .enjoy {
-  margin-left: 165px;
-  text-align: center;
-  margin-top: 5px;
   height: 80px;
+  text-align: center;
+  margin-top: 60px;
+
+  @media (min-width: 768px) {
+    margin-left: 165px;
+    text-align: center;
+    margin-top: 5px;
+  }
+
+  @media (min-width: 1199px) {
+    margin: 0;
+    margin-left: 70px;
+  }
 }
 
 .enjoy__head {
@@ -78,8 +102,22 @@
 .enjoy-list {
   width: 206px;
   padding: 0px;
+  margin: 0 auto;
   display: flex;
+  align-items: center;
   justify-content: space-between;
+
+  @media (min-width: 360px) {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .enjoy-list__item {
