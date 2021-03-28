@@ -1,0 +1,112 @@
+.about {
+  padding: 60px 0;
+
+  @media (min-width: 1200px) {
+    padding: 94px 0;
+  }
+}
+
+.about-list {
+  display: flex;
+}
+
+.icon-list {
+  margin-top: calc(-1 * 20px);
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * 20px);
+  }
+}
+
+.icon-list__rect {
+  margin-top: 20px;
+  flex-basis: calc(100% / 1 - 20px);
+
+  @media (max-width: 767px) {
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    flex-basis: calc(100% / 2 - 20px);
+    margin-left: 20px;
+  }
+
+  @media (min-width: 1200px) {
+    flex-basis: calc(100% / 4 - 20px);
+    margin-left: 20px;
+  }
+}
+
+.icon-list__thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  background-color: $rect-color;
+}
+
+.icon-list__antenna {
+  width: 70px;
+  height: 70px;
+}
+
+.icon-list__clock {
+  width: 70px;
+  height: 70px;
+}
+
+.icon-list__diagram {
+  width: 70px;
+  height: 70px;
+}
+
+.icon-list__astronaut {
+  width: 70px;
+  height: 70px;
+}
+
+.about-list__item {
+  &:first-child {
+    margin-right: 30px;
+  }
+
+  &:last-child {
+    margin-left: 30px;
+  }
+
+  &:nth-child(2) {
+    margin-right: 30px;
+  }
+}
+
+.about-list__head {
+  color: $h-color;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-top: 30px;
+  text-align: center;
+
+  @media (min-width: 1200px) {
+    text-align: start;
+  }
+}
+
+.about-list__text {
+  color: $gray-text;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}

@@ -1,10 +1,46 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $backdrop-color;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 528px;
+  height: 581px;
+  background-color: $backdrop-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
 .modal__call-me {
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
   line-height: 23px;
   letter-spacing: 0.03em;
-  color: $h-color;
+  color: var(--h-color);
   margin-bottom: 12px;
 }
 
@@ -19,41 +55,39 @@
   cursor: pointer;
 }
 
-.call-form {
-  & input:focus {
-    border-color: $hover-color;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
+.call-form input:focus {
+  border-color: $hover-color;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-  & textarea {
-    width: 448px;
-    height: 120px;
-    border: 1px solid $form-border-color;
-    border-radius: 4px;
-    resize: none;
-    outline: none;
-    display: block;
-    padding: 12px 16px;
-  }
+.call-form textarea {
+  width: 448px;
+  height: 120px;
+  border: 1px solid $form-border-color;
+  border-radius: 4px;
+  resize: none;
+  outline: none;
+  display: block;
+  padding: 12px 16px;
+}
 
-  & textarea::placeholder {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 14px;
-    letter-spacing: 0.01em;
-    color: $commentary-form;
-  }
+.call-form textarea::placeholder {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: $commentary-form;
+}
 
-  & label {
-    margin-bottom: 4px;
-    display: block;
-  }
+.call-form label {
+  margin-bottom: 4px;
+  display: block;
+}
 
-  & textarea:focus {
-    border-color: $hover-color;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
+.call-form textarea:focus {
+  border-color: $hover-color;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .person-form {
@@ -72,11 +106,11 @@
 .person-frame {
   position: relative;
   height: 40px;
+}
 
-  &:focus-within {
-    fill: $hover-color;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
+.person-frame:focus-within {
+  fill: $hover-color;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .person-frame__icon {
@@ -88,7 +122,7 @@
   display: inline-block;
   width: 18px;
   height: 18px;
-  color: var(--h-color);
+  color: $h-color;
 }
 
 .person-comment {
@@ -112,7 +146,7 @@
 }
 
 .person-checkbox__agree-input:checked + .person-checkbox__icon {
-  fill: var(--white-text);
+  fill: $white-text;
   background-color: $hover-color;
   border: none;
   border-radius: 2px;
@@ -173,11 +207,11 @@
   margin: 40px auto 0;
   margin-top: 0;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-  &:hover,
-  &:focus {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  }
+.person-checkbox__submit-button:hover,
+.person-checkbox__submit-button:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .modal__close-button {
@@ -194,9 +228,9 @@
   background-color: $background-modal;
   fill: black;
   outline: none;
+}
 
-  &:hover,
-  &:focus {
-    fill: $hover-color;
-  }
+.modal__close-button:hover,
+.modal__close-button:focus {
+  fill: $hover-color;
 }

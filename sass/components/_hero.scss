@@ -1,0 +1,62 @@
+.hero {
+  max-width: 1600px;
+  height: 400px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 118px 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url('../images/imghero.jpg');
+  text-align: center;
+
+  @media (min-width: 1200px) {
+    height: 600px;
+    padding: 200px 0;
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url('../images/imghero2x.jpg');
+  }
+}
+
+.hero-title {
+  color: $white-text;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  max-width: 360px;
+  margin: 0 auto;
+
+  @media (min-width: 1200px) {
+    font-size: 44px;
+    line-height: 1.36;
+    max-width: 696px;
+  }
+}
+
+.hero-title__button {
+  background: $hover-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: $white-text;
+  margin-top: 30px;
+  border: none;
+  padding: 10px 32px;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.75;
+  letter-spacing: 0.06em;
+}
