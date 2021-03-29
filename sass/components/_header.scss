@@ -7,6 +7,7 @@
 .page-nav {
   align-items: center;
   min-height: 80px;
+  position: relative;
 }
 
 .page-nav__logo {
@@ -15,10 +16,15 @@
   font-family: Raleway, sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 26px;
-  line-height: 31px;
+  font-size: 24px;
+  line-height: 28px;
   letter-spacing: 0.03em;
-  margin-right: 43px;
+
+  @media (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 31px;
+    margin-right: 43px;
+  }
 }
 
 .page-nav__web {
@@ -27,8 +33,10 @@
 }
 
 .page-nav__list {
+  display: none;
+
   & li:first-child {
-    margin-left: 50px;
+    // margin-left: 50px;
     margin-right: 50px;
   }
 
@@ -81,6 +89,7 @@
 
 .contacts-list {
   margin-left: 305px;
+  display: none;
 }
 
 .contacts-list__item {
@@ -119,4 +128,44 @@
   margin-left: 30px;
   margin-right: 10px;
   fill: currentColor;
+}
+
+.mobile-nav {
+}
+
+.mobile-nav__link {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 47px;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.mobile-nav__contact {
+}
+
+.mobile-nav__mail {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.mobile-nav__tel {
+  width: 10px;
+  height: 16px;
+  margin-left: 30px;
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 40px;
+  background-color: #fff;
 }
