@@ -40,15 +40,20 @@
                     </svg>+38 096 111 11 11</a>
             </li>
         </ul>
-        <button type="js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+        <button type="button" class="menu-toggle js-open-menu mobile-open-button" aria-expanded="false" aria-controls="mobile-menu">
             <svg class="mobile-menu__icon" width="40" height="40">
                 <use href="images/mainsprite.svg#menu-icon"></use>
             </svg>
         </button>
         <div class="menu-container js-menu-container" id="mobile-menu">
+            
+            <button class="menu-toggle js-close-menu mobile-close-button">
+                <svg class="mobile-close-icon" width="30" height="30" aria-label="close">
+                <use href="./images/mainsprite.svg#icon-close"></use>
+            </svg></button>
+        
             <ul class="mobile-nav">
-                
-                <li><a class="mobile-nav__link current" href="index.html">Студия</a></li>
+                <li><a class="mobile-nav__link mobile-current" href="index.html">Студия</a></li>
                 <li><a class="mobile-nav__link" href="portfolio.html">Портфолио</a></li>
                 <li><a class="mobile-nav__link" href="contacts.html">Контакты</a></li>
             </ul>
@@ -65,7 +70,7 @@
             </ul>
 
                 <ul class="mobile-nav__social">
-                    <li><a class="mobile-nav__social-link">Instagram</a></li>
+                    <li><a class="mobile-nav__social-link">Instagram</a><span class="mobile-nav__string">|</span></li>
                     <li><a class="mobile-nav__social-link">Twitter</a></li>
                     <li><a class="mobile-nav__social-link">Facebook</a></li>
                     <li><a class="mobile-nav__social-link">LinkedIn</a></li>

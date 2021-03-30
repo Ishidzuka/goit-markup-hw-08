@@ -131,7 +131,9 @@
 }
 
 .mobile-nav {
-  margin-bottom: 302px;
+  & li:not(:last-child) {
+    margin-bottom: 32px;
+  }
 }
 
 .mobile-nav__link {
@@ -141,24 +143,99 @@
   line-height: 40px;
   text-align: center;
   letter-spacing: 0.02em;
+  color: $h-color;
+
+  &:focus {
+    color: $hover-color;
+  }
 }
 
-.mobile-nav__contact {
+.mobile-nav__contacts {
+  & li:first-child {
+    margin-bottom: 32px;
+  }
 }
 
 .mobile-nav__mail {
-  width: 16px;
-  height: 12px;
-  margin-right: 10px;
-  fill: currentColor;
+  font-size: 22px;
+  line-height: 25px;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0.02em;
+  color: $gray-text;
+
+  &:focus {
+    color: $hover-color;
+  }
 }
 
 .mobile-nav__tel {
-  width: 10px;
-  height: 16px;
-  margin-left: 30px;
-  margin-right: 10px;
-  fill: currentColor;
+  font-size: 27px;
+  line-height: 25px;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0.02em;
+  color: $gray-text;
+
+  &:focus {
+    color: $hover-color;
+  }
+}
+
+.mobile-nav__social {
+  display: flex;
+  justify-content: space-between;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+}
+
+.mobile-nav__social {
+  & li:not(:last-child) {
+    padding-right: 5px;
+    border-right: 1px solid $mobile-border;
+  }
+}
+
+.mobile-nav__social-link {
+  color: $hover-color;
+}
+
+.mobile-nav__string {
+  width: 1px;
+  height: 22px;
+}
+
+.mobile-open-button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  margin-left: auto;
+  display: flex;
+
+  &:focus {
+    fill: $hover-color;
+  }
+
+  @media (min-width: 767px) {
+    display: none;
+  }
+}
+
+.mobile-close-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  background-color: transparent;
+  border: none;
+  outline: none;
+
+  &:focus {
+    fill: $hover-color;
+  }
 }
 
 .menu-container {
@@ -167,7 +244,22 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding: 48px 40px;
-  background-color: #fff;
-  display: none;
+  padding: 24px 20px;
+  background-color: rgba(255, 255, 255, 0);
+  z-index: 999;
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+  // display: none;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.mobile-nav .mobile-nav__link.mobile-current {
+  color: $hover-color;
+}
+
+.mobile-nav .mobile-nav__link.mobile-current::after {
+  opacity: 1;
 }

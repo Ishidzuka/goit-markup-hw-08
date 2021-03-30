@@ -44,13 +44,6 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 
-  // &:nth-child(2) {
-  //   margin: 0 30px;
-  // }
-
-  // &:nth-child(3) {
-  //   margin-right: 30px;
-  // }
   margin-top: 30px;
   flex-basis: calc(100% / 1 - 30px);
 
@@ -106,7 +99,7 @@
   line-height: 19px;
   letter-spacing: 0.03em;
   text-align: center;
-  padding-bottom: 16px;
+  margin-bottom: 16px;
 }
 
 /*svg team*/

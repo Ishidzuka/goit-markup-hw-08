@@ -215,8 +215,8 @@ button {
   fill: currentColor;
 }
 
-.mobile-nav {
-  margin-bottom: 302px;
+.mobile-nav li:not(:last-child) {
+  margin-bottom: 32px;
 }
 
 .mobile-nav__link {
@@ -226,21 +226,104 @@ button {
   line-height: 40px;
   text-align: center;
   letter-spacing: 0.02em;
+  color: #212121;
+}
+
+.mobile-nav__link:focus {
+  color: #2196f3;
+}
+
+.mobile-nav__contacts li:first-child {
+  margin-bottom: 32px;
 }
 
 .mobile-nav__mail {
-  width: 16px;
-  height: 12px;
-  margin-right: 10px;
-  fill: currentColor;
+  font-size: 22px;
+  line-height: 25px;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0.02em;
+  color: #757575;
+}
+
+.mobile-nav__mail:focus {
+  color: #2196f3;
 }
 
 .mobile-nav__tel {
-  width: 10px;
-  height: 16px;
-  margin-left: 30px;
-  margin-right: 10px;
-  fill: currentColor;
+  font-size: 27px;
+  line-height: 25px;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0.02em;
+  color: #757575;
+}
+
+.mobile-nav__tel:focus {
+  color: #2196f3;
+}
+
+.mobile-nav__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+}
+
+.mobile-nav__social li:not(:last-child) {
+  padding-right: 5px;
+  border-right: 1px solid #757575;
+}
+
+.mobile-nav__social-link {
+  color: #2196f3;
+}
+
+.mobile-open-button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mobile-open-button:focus {
+  fill: #2196f3;
+}
+
+@media (min-width: 767px) {
+  .mobile-open-button {
+    display: none;
+  }
+}
+
+.mobile-close-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: auto;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.mobile-close-button:focus {
+  fill: #2196f3;
 }
 
 .menu-container {
@@ -249,9 +332,28 @@ button {
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding: 48px 40px;
+  padding: 24px 20px;
   background-color: #fff;
-  display: none;
+  z-index: 999;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.mobile-nav .mobile-nav__link.mobile-current {
+  color: #2196f3;
+}
+
+.mobile-nav .mobile-nav__link.mobile-current::after {
+  opacity: 1;
 }
 
 .hero {
@@ -991,7 +1093,7 @@ button {
   line-height: 19px;
   letter-spacing: 0.03em;
   text-align: center;
-  padding-bottom: 16px;
+  margin-bottom: 16px;
 }
 
 /*svg team*/
