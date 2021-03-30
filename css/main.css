@@ -85,7 +85,7 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 80px;
+  min-height: 60px;
   position: relative;
 }
 
@@ -215,6 +215,10 @@ button {
   fill: currentColor;
 }
 
+.mobile-nav {
+  margin-bottom: 306px;
+}
+
 .mobile-nav li:not(:last-child) {
   margin-bottom: 32px;
 }
@@ -231,6 +235,10 @@ button {
 
 .mobile-nav__link:focus {
   color: #2196f3;
+}
+
+.mobile-nav__contacts {
+  margin-bottom: 32px;
 }
 
 .mobile-nav__contacts li:first-child {
@@ -267,19 +275,23 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   font-style: normal;
   font-weight: 500;
   font-size: 13px;
   line-height: 22px;
   letter-spacing: 0.02em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .mobile-nav__social li:not(:last-child) {
   padding-right: 5px;
-  border-right: 1px solid #757575;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.mobile-nav__social li:not(:first-child) {
+  padding-left: 5px;
 }
 
 .mobile-nav__social-link {
@@ -290,17 +302,27 @@ button {
   background-color: transparent;
   border: none;
   outline: none;
-  margin-left: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+  margin-left: auto;
+  padding: 0;
+  width: 40px;
+  height: 40px;
 }
 
 .mobile-open-button:focus {
   fill: #2196f3;
 }
 
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .mobile-open-button {
     display: none;
   }
@@ -316,10 +338,14 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: 0;
+  padding: 0;
   margin-left: auto;
   background-color: transparent;
   border: none;
   outline: none;
+  width: 40px;
+  height: 40px;
 }
 
 .mobile-close-button:focus {
@@ -332,8 +358,8 @@ button {
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding: 24px 20px;
-  background-color: #fff;
+  padding: 10px 15px 0;
+  background-color: white;
   z-index: 999;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
@@ -341,6 +367,12 @@ button {
   transition: -webkit-transform 250ms ease-in-out;
   transition: transform 250ms ease-in-out;
   transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+@media (min-width: 768px) {
+  .menu-container {
+    display: none;
+  }
 }
 
 .menu-container.is-open {
