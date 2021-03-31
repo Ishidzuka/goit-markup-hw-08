@@ -17,13 +17,22 @@
 <body>
     <header>
         <div class="container">
-            <nav class="page-nav">
+            <div class="navigation-container">
                 <a href="index.html" class="page-nav__logo"><span class="page-nav__web">Web</span>Studio</a>
-                <ul class="page-nav__list">
-                    <li><a class="nav-list__link" href="index.html">Студия</a></li>
-                    <li><a class="nav-list__link current" href="portfolio.html">Портфолио</a></li>
-                    <li><a class="nav-list__link" href="contacts.html">Контакты</a></li>
-                </ul>
+                <button type="button" class="menu-toggle js-open-menu mobile-open-button" aria-expanded="false"
+                    aria-controls="mobile-menu">
+                    <svg class="mobile-menu__icon" width="40" height="40">
+                        <use href="images/mainsprite.svg#menu-icon"></use>
+                    </svg>
+                </button>
+    
+                <nav class="page-nav">
+                    <ul class="page-nav__list">
+                        <li><a class="nav-list__link" href="index.html">Студия</a></li>
+                        <li><a class="nav-list__link current" href="portfolio.html">Портфолио</a></li>
+                        <li><a class="nav-list__link" href="contacts.html">Контакты</a></li>
+                    </ul>
+                </nav>
     
                 <ul class="contacts-list">
                     <li>
@@ -40,7 +49,39 @@
                             </svg>+38 096 111 11 11</a>
                     </li>
                 </ul>
-            </nav>
+            </div>
+    
+            <div class="menu-container js-menu-container" id="mobile-menu">
+                <button class="menu-toggle js-close-menu mobile-close-button">
+                    <svg class="mobile-close-icon" width="40" height="40" aria-label="close">
+                        <use href="./images/mainsprite.svg#icon-close"></use>
+                    </svg></button>
+    
+                <ul class="mobile-nav">
+                    <li><a class="mobile-nav__link" href="index.html">Студия</a></li>
+                    <li><a class="mobile-nav__link mobile-current" href="portfolio.html">Портфолио</a></li>
+                    <li><a class="mobile-nav__link" href="contacts.html">Контакты</a></li>
+                </ul>
+    
+                <ul class="mobile-nav__contacts">
+                    <li>
+                        <a href="tel:+380961111111" class="mobile-nav__tel">
+                            +38 096 111 11 11</a>
+                    </li>
+                    <li>
+                        <a href="mailto:info@devstudio.com" class="mobile-nav__mail">
+                            info@devstudio.com</a>
+                    </li>
+                </ul>
+    
+                <ul class="mobile-nav__social">
+                    <li><a class="mobile-nav__social-link">Instagram</a></li>
+                    <li><a class="mobile-nav__social-link">Twitter</a></li>
+                    <li><a class="mobile-nav__social-link">Facebook</a></li>
+                    <li><a class="mobile-nav__social-link">LinkedIn</a></li>
+                </ul>
+            </div>
+    
         </div>
     </header>
 
@@ -71,7 +112,7 @@
     </div>
         <div class="container">
     <ul class="project-list">
-        <div class="project-group">
+        
             <li class="project-group__item">
                 <a href="" class="project-group__link">         
                     <div class="project-thumb">    
@@ -130,9 +171,9 @@
                     </div>
                 </a>
             </li>
-        </div>
+        
             
-        <div class="project-group">
+        
             <li class="project-group__item">
                 <a href="" class="project-group__link">
                     <div class="project-thumb">
@@ -192,9 +233,9 @@
                 </div>
             </a>
         </li>
-            </div>
             
-        <div class="project-group">
+            
+        
             <li class="project-group__item">
                 <a href="" class="project-group__link">
                     <div class="project-thumb">
@@ -254,61 +295,64 @@
                     </div>
                 </a>
             </li>
-        </div>
+        
         </ul>
     </div>
     </section>
 </main>
 <footer class="footer">
-        <div class="container">
-            <div class="footer-container">
-                <div class="footer-text">
-                    <a href="/" class="footer-text__logo"><span class="page-nav__web">Web</span><span
-                            class="footer-text__logo-studio">Studio</span></a>
-                    <address class="address">
-                        <p class="address__main">г. Киев, пр-т Леси Украинки, 26</p>
-                        <ul class="address-list">
-                            <li class="address-list__item"><a href="mailto:info@devstudio.com"
-                                    class="address-list__link">info@devstudio.com</a></li>
-                            <li class="address-list__item"><a href="tel:+380961111111" class="address-list__link">+38 096 111 11
-                                    11</a></li>
-                        </ul>
-                    </address>
-                </div>
-                <div class="enjoy">
-                    <h2 class="enjoy__head">Присоединяйтесь</h2>
-                    <ul class="enjoy-list">
-                        <li><a href="" class="enjoy-list__item"> <svg class="enjoy-list__icon">
-                                    <use href="images/mainsprite.svg#icon-instagram"></use>
-                                </svg></a></li>
-                        <li><a href="" class="enjoy-list__item"> <svg class="enjoy-list__icon">
-                                    <use href="images/mainsprite.svg#icon-twitter"></use>
-                                </svg></a></li>
-                        <li><a href="" class="enjoy-list__item"> <svg class="enjoy-list__icon">
-                                    <use href="images/mainsprite.svg#icon-facebook"></use>
-                                </svg></a></li>
-                        <li><a href="" class="enjoy-list__item"> <svg class="enjoy-list__icon">
-                                    <use href="images/mainsprite.svg#icon-linkedin"></use>
-                                </svg></a></li>
-                    </ul>
-                </div>
-        
-                <div class="subscribe">
-                    <form class="subscribe-form">
-                        <label class="subscribe-form__title" for="email-subscribe">ПОДПИШИТЕСЬ НА РАССЫЛКУ</label>
-                        <div class="subscribe-form-btn">
-                            <input class="subscribe-form-btn__input" type="email" name="email" placeholder="E-mail"
-                                id="email-subscribe">
-                            <button class="subscribe-form-btn__submit" type="submit">Подписаться
-                                <svg class="subscribe-form-btn__icon" width="24" height="24">
-                                    <use href="./images/mainsprite.svg#subscribe-icon"></use>
-                                </svg>
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
+    <div class="container">
+        <div class="footer-text">
+            <a href="/" class="footer-text__logo"><span class="page-nav__web">Web</span><span
+                    class="footer-text__logo-studio">Studio</span></a>
+            <address class="address">
+                <p class="address__main">г. Киев, пр-т Леси Украинки, 26</p>
+                <ul class="address-list">
+                    <li class="address-list__item"><a href="mailto:info@devstudio.com"
+                            class="address-list__link">info@devstudio.com</a></li>
+                    <li class="address-list__item"><a href="tel:+380961111111" class="address-list__link">+38 096 111 11
+                            11</a></li>
+                </ul>
+            </address>
         </div>
+        <div class="join">
+            <h2 class="join__head">Присоединяйтесь</h2>
+            <ul class="join-list">
+                <li><a href="" class="join-list__item"> <svg class="join-list__icon">
+                            <use href="images/mainsprite.svg#icon-instagram"></use>
+                        </svg></a></li>
+                <li><a href="" class="join-list__item"> <svg class="join-list__icon">
+                            <use href="images/mainsprite.svg#icon-twitter"></use>
+                        </svg></a></li>
+                <li><a href="" class="join-list__item"> <svg class="join-list__icon">
+                            <use href="images/mainsprite.svg#icon-facebook"></use>
+                        </svg></a></li>
+                <li><a href="" class="join-list__item"> <svg class="join-list__icon">
+                            <use href="images/mainsprite.svg#icon-linkedin"></use>
+                        </svg></a></li>
+            </ul>
+        </div>
+
+
+        <div class="subscribe">
+            <form class="subscribe-form">
+                <label class="subscribe-form__title" for="email-subscribe">Подпишитесь на рассылку</label>
+                <div class="subscribe-form-btn">
+                    <input class="subscribe-form-btn__input" type="email" name="email" placeholder="E-mail"
+                        id="email-subscribe">
+                    <button class="subscribe-form-btn__submit" type="submit">Подписаться
+                        <svg class="subscribe-form-btn__icon" width="24" height="24">
+                            <use href="./images/mainsprite.svg#subscribe-icon"></use>
+                        </svg>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
 </footer>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+    crossorigin="anonymous"></script>
+<script defer src="js/mobile-menu.js"></script>
 </body>
 </html>
