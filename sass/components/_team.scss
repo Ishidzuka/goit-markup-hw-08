@@ -38,6 +38,24 @@
   }
 }
 
+.team-list__img {
+  object-fit: cover;
+  @media (min-width: 480px) {
+    width: 450px;
+    height: 460px;
+  }
+
+  @media (min-width: 768px) {
+    width: 354px;
+    height: 374px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 270px;
+    height: 260px;
+  }
+}
+
 .team-list__item {
   background-color: $white-text;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -57,6 +75,9 @@
     flex-basis: calc(100% / 2 - 30px);
     margin-left: 30px;
     width: 354px;
+  }
+
+  @media (min-width: 480px) {
   }
 
   @media (min-width: 1200px) {

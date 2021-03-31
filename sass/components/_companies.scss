@@ -32,6 +32,7 @@
 .companies-list__item {
   margin-left: 20px;
   margin-top: 20px;
+
   flex-basis: calc(100% / 2 - 20px);
 
   @media (min-width: 768px) {
@@ -42,9 +43,6 @@
     margin-left: 20px;
     flex-basis: calc(100% / 6 - 20px);
   }
-}
-
-.companies-list__thumb {
 }
 
 .companies__link {
@@ -61,6 +59,18 @@
   &:focus {
     color: $hover-color;
     border-color: $hover-color;
+  }
+
+  @media (min-width: 480px) {
+    width: 210px;
+  }
+
+  @media (min-width: 768px) {
+    width: 226px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 170px;
   }
 }
 

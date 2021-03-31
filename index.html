@@ -17,7 +17,7 @@
 <body>
 <header>
     <div class="container">
-    <div class="logo-container">
+    <div class="navigation-container">
         <a href="index.html" class="page-nav__logo"><span class="page-nav__web">Web</span>Studio</a>
     <button type="button" class="menu-toggle js-open-menu mobile-open-button" aria-expanded="false"
         aria-controls="mobile-menu">
@@ -25,32 +25,32 @@
             <use href="images/mainsprite.svg#menu-icon"></use>
         </svg>
     </button>
-    </div>
-    
+
     <nav class="page-nav">
         <ul class="page-nav__list">
             <li><a class="nav-list__link current" href="index.html">Студия</a></li>
             <li><a class="nav-list__link" href="portfolio.html">Портфолио</a></li>
-            <li><a class="nav-list__link" href="contacts.html">Контакты</a></li>  
+            <li><a class="nav-list__link" href="contacts.html">Контакты</a></li>
         </ul>
     </nav>
-        
-        <ul class="contacts-list">
-             <li>
-                 <a href="mailto:info@devstudio.com" class="contacts-list__item">
-                     <svg class="contacts-list__mail">
-                         <use href="images/mainsprite.svg#icon-mail"></use>
-                    </svg>info@devstudio.com</a>
-            </li>
-            
-            <li>
-                <a href="tel:+380961111111"  class="contacts-list__item">
-                    <svg class="contacts-list__tel">
-                        <use href="images/mainsprite.svg#icon-tel"></use>
-                    </svg>+38 096 111 11 11</a>
-            </li>
-        </ul>
-        
+    
+    <ul class="contacts-list">
+        <li>
+            <a href="mailto:info@devstudio.com" class="contacts-list__item">
+                <svg class="contacts-list__mail">
+                    <use href="images/mainsprite.svg#icon-mail"></use>
+                </svg>info@devstudio.com</a>
+        </li>
+    
+        <li>
+            <a href="tel:+380961111111" class="contacts-list__item">
+                <svg class="contacts-list__tel">
+                    <use href="images/mainsprite.svg#icon-tel"></use>
+                </svg>+38 096 111 11 11</a>
+        </li>
+    </ul>
+</div>
+   
         <div class="menu-container js-menu-container" id="mobile-menu"> 
             <button class="menu-toggle js-close-menu mobile-close-button">
                 <svg class="mobile-close-icon" width="40" height="40" aria-label="close">
@@ -164,7 +164,8 @@
     <div class="container">
         <h3 class="team__head">Наша команда</h3>
         <ul class="team-list">
-            <li class="team-list__item"><img src="images/photo1.jpg" width="100%" alt="Игорь Демьяненко">
+            <li class="team-list__item">
+                <img src="images/photo1.jpg" alt="Игорь Демьяненко" class="team-list__img">
                 <div class="team-list__text">
                 <h4 class="team-list__mate">Игорь Демьяненко</h4>
                 <p class="team-list__special">Product Designer</p>
@@ -177,7 +178,8 @@
                 </div>
             </li>
                        
-             <li class="team-list__item"><img src="images/photo2.jpg" width="100%" alt="Ольга Репина">
+             <li class="team-list__item">
+                 <img src="images/photo2.jpg" width="100%" alt="Ольга Репина" class="team-list__img">
                 <div class="team-list__text">
                 <h4 class="team-list__mate">Ольга Репина</h4>
                 <p class="team-list__special">Frontend Developer</p>
@@ -190,7 +192,8 @@
                 </div>
             </li>
         
-            <li class="team-list__item"><img src="images/photo3.jpg" width="100%" alt="Николай Тарасов">
+            <li class="team-list__item">
+                <img src="images/photo3.jpg" width="100%" alt="Николай Тарасов" class="team-list__img">
                 <div class="team-list__text">
                 <h4 class="team-list__mate">Николай Тарасов</h4>
                 <p class="team-list__special">Marketing</p>
@@ -203,7 +206,8 @@
                 </div>
             </li>
         
-            <li class="team-list__item"><img src="images/photo4.jpg" width="100%" alt="Михаил Ермаков">
+            <li class="team-list__item">
+                <img src="images/photo4.jpg" width="100%" alt="Михаил Ермаков" class="team-list__img">
                 <div class="team-list__text">
                 <h4 class="team-list__mate">Михаил Ермаков</h4>
                 <p class="team-list__special">UI Designer</p>
