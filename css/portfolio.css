@@ -531,12 +531,57 @@ button {
 }
 
 /*hero*/
+.hero {
+  padding: 60px 0;
+}
+
+@media (min-width: 1200px) {
+  .hero {
+    padding: 94px 0;
+  }
+}
+
+.hero-btn-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-preferred-size: calc 33.33333%;
+      flex-basis: calc 33.33333%;
+}
+
+@media (min-width: 768px) {
+  .hero-btn-list {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .hero-btns {
-  margin-bottom: 40px;
+  margin-bottom: 60px;
+}
+
+@media (min-width: 768px) {
+  .hero-btns {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero-btns {
+    margin-bottom: 50px;
+  }
 }
 
 .hero-btn-list__item {
   padding: 6px 22px;
+  margin-right: 8px;
+  margin-bottom: 15px;
   border-radius: 4px;
   background: #f5f4fa;
   color: #212121;
@@ -560,9 +605,15 @@ button {
           box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
+@media (min-width: 768px) {
+  .hero-btn-list__item {
+    margin-bottom: 0;
+  }
+}
+
 /*projects*/
 .project-list {
-  margin-top: calc(-1 * 20px);
+  margin-top: calc(-1 * 30px);
 }
 
 @media (min-width: 768px) {
@@ -572,40 +623,37 @@ button {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin-left: calc(-1 * 20px);
-  }
-}
-
-.project-group__item {
-  margin-top: 20px;
-  -ms-flex-preferred-size: calc(100% / 1 - 20px);
-      flex-basis: calc(100% / 1 - 20px);
-}
-
-@media (max-width: 767px) {
-  .project-group__item:not(:first-child) {
-    margin-top: 20px;
-  }
-}
-
-@media (min-width: 768px) {
-  .project-group__item {
-    -ms-flex-preferred-size: calc(100% / 2 - 20px);
-        flex-basis: calc(100% / 2 - 20px);
-    margin-left: 20px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .project-group__item {
-    -ms-flex-preferred-size: calc(100% / 4 - 20px);
-        flex-basis: calc(100% / 4 - 20px);
-    margin-left: 20px;
+    margin-left: calc(-1 * 30px);
   }
 }
 
 .project-group__item {
   border: 1px solid #eeeeee;
+  margin-top: 30px;
+  -ms-flex-preferred-size: calc(100% / 1 - 30px);
+      flex-basis: calc(100% / 1 - 30px);
+}
+
+@media (max-width: 767px) {
+  .project-group__item:not(:first-child) {
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .project-group__item {
+    -ms-flex-preferred-size: calc(100% / 2 - 30px);
+        flex-basis: calc(100% / 2 - 30px);
+    margin-left: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .project-group__item {
+    -ms-flex-preferred-size: calc(100% / 3 - 30px);
+        flex-basis: calc(100% / 3 - 30px);
+    margin-left: 30px;
+  }
 }
 
 .project-group__link {
@@ -634,23 +682,39 @@ button {
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
+.project-container {
+  height: 404px;
+}
+
+@media (min-width: 480px) {
+  .project-container {
+    width: 450px;
+  }
+}
+
+@media (min-width: 768px) {
+  .project-container {
+    width: 100%;
+    height: 440px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .project-container {
+    height: 404px;
+  }
+}
+
 .project-thumb {
   position: relative;
   overflow: hidden;
-  height: 294px;
 }
 
 .project-thumb img {
   width: 100%;
-  height: 100%;
+  height: 294px;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-@media (max-width: 480px) {
-  .project-thumb {
-    max-width: 450px;
-  }
 }
 
 /*overlay*/
@@ -715,6 +779,13 @@ button {
   letter-spacing: 0.06em;
 }
 
+@media (min-width: 480px) {
+  .project-card__title {
+    font-size: 18px;
+    line-height: 36px;
+  }
+}
+
 .project-card__text {
   color: #757575;
   font-style: normal;
@@ -722,6 +793,13 @@ button {
   font-size: 15px;
   line-height: 30px;
   letter-spacing: 0.03em;
+}
+
+@media (min-width: 480px) {
+  .project-card__text {
+    font-size: 16px;
+    line-height: 30px;
+  }
 }
 
 .footer {
