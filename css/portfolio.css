@@ -303,7 +303,13 @@ button {
 }
 
 .mobile-nav {
-  margin-bottom: 306px;
+  margin-bottom: 150px;
+}
+
+@media (min-width: 400px) {
+  .mobile-nav {
+    margin-bottom: 305px;
+  }
 }
 
 .mobile-nav li:not(:last-child) {

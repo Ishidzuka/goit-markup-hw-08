@@ -27,6 +27,7 @@
   justify-content: center;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 40px;
 
   @media (min-width: 300px) {
     width: 300px;
@@ -53,10 +54,6 @@
 
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.9);
-}
-
-.call-form {
-  padding: 40px;
 }
 
 .call-form__title {
@@ -164,8 +161,8 @@
 }
 
 .person-checkbox {
-  font-size: 14px;
-  line-height: 1.714;
+  font-size: 12px;
+  line-height: 14px;
   letter-spacing: 0.03em;
   color: $agreement-text;
   display: flex;
@@ -173,6 +170,11 @@
   margin-bottom: 30px;
   width: 100%;
   position: relative;
+
+  @media (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 24px;
+  }
 }
 
 .person-checkbox__agree-input + .person-checkbox__icon {
@@ -220,7 +222,7 @@
 .person-checkbox__agree-link {
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 0.9;
   letter-spacing: 0.03em;
   color: $checkbox-link;
